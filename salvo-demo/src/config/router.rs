@@ -6,7 +6,7 @@ use salvo::Router;
 
 pub fn init_router() -> Router {
     Router::new()
-        .push(Router::with_path("").get(hello))
+        .push(Router::with_path("/").get(hello))
         .push(
             Router::new()
                 .path("/users")
