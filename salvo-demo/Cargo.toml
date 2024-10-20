@@ -7,7 +7,7 @@ edition = "2021"
 salvo = { git = "https://gitee.com/salvo-rs/salvo", features = ["quinn"] }
 tracing = "0.1.40"
 tracing-subscriber = "0.3.18"
-tokio = { version = "1.40.0", features = ["full"] }
+tokio = { version="1.40.0", features = ["full"] }
 serde = { version = "1.0.210", features = ["derive"] }
 serde_json = "1.0.128"
 rbs = { version = "4.5.20" }
@@ -18,7 +18,7 @@ once_cell = "1.20.1"
 redis = { version = "0.27.4", features = ["tokio-comp", "json", "cluster"] }
 anyhow = "1.0.89"
 mimalloc = {version="0.1.43",features = []}
-actix-web = "4"
+# actix-web = "4"
 
 [profile.dev]
 overflow-checks = false

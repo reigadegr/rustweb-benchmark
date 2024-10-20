@@ -4,6 +4,7 @@ use salvo::conn::rustls::{Keycert, RustlsConfig};
 use salvo::conn::{QuinnListener, TcpListener};
 use salvo::{Listener, Router, Server};
 
+#[inline]
 async fn use_http1(router: Router) {
     let acceptor = TcpListener::new("0.0.0.0:5800").bind().await;
     Server::new(acceptor).serve(router).await;
@@ -22,6 +23,7 @@ async fn use_http3(router: Router) {
     Server::new(acceptor).serve(router).await;
 }
 
+#[inline]
 pub async fn init_salvo_framework() {
     tracing_subscriber::fmt().init();
     // init_mysql().await;
